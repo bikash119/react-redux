@@ -16,3 +16,13 @@ export function loadCourses(){
     });
   };
 }
+
+export function saveCourse(course){
+  return function(dispath){
+    return courseApi.saveCourse().then(courses => {
+      dispath(loadCoursesSuccess(courses));
+    }).catch(error => {
+      throw(error);
+    });
+  };
+}
