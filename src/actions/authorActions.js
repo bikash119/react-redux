@@ -1,6 +1,6 @@
 import * as types from './actionTypes';
 import authorApi from '../api/mockAuthorApi';
-import {beginAjaxCall} from './ajaxStatusActions';
+import {beginAjaxCall} from './ajaxStatusAction';
 export function loadAuthorSuccess(authors){
   debugger;
   return {
