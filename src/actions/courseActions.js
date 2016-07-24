@@ -23,7 +23,7 @@ export function updateCourseSuccess(course){
 }
 
 export function loadCourses(){
-  return function(dispath){
+  return function(dispatch){
     dispatch(beginAjaxCall());
     return courseApi.getAllCourses().then(courses => {
       dispath(loadCoursesSuccess(courses));
