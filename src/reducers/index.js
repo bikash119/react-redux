@@ -4,7 +4,7 @@ import authors from './authorReducer';
 import ajaxCallInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  courses,
+  courses,//short hand property name
   authors,
   ajaxCallInProgress
 });

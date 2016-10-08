@@ -4,7 +4,7 @@ import {beginAjaxCall,ajaxCallError} from './ajaxStatusAction';
 export function loadCoursesSuccess(courses){
   debugger;
   return {
-    type: types.LOAD_COURSES_SUCCESS, courses
+    type: types.LOAD_COURSES_SUCCESS, courses //short hand property name
   };
 }
 
@@ -26,7 +26,7 @@ export function loadCourses(){
   return function(dispatch){
     dispatch(beginAjaxCall());
     return courseApi.getAllCourses().then(courses => {
-      dispath(loadCoursesSuccess(courses));
+      dispatch(loadCoursesSuccess(courses));
     }).catch(error => {
       throw(error);
     });
